@@ -10,6 +10,15 @@
     <link rel="stylesheet" crossorigin href="/qual-e-o-filme/assets/index-EIbhv0H6.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('resize', () => {
+        if (window.innerHeight < window.outerHeight) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      })
+    </script>
   </body>
 </html>
