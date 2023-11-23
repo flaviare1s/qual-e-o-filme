@@ -9,7 +9,7 @@ export const GameRules = () => {
             <p>A cada palpite errado, você perde uma vida.</p>
             <p>Cuidado, você só tem dez vidas.</p>
             <p>Você recebe mais pontos se usar menos dicas.</p>
-            <p>Escreva o nome dos filmes corretamente.</p>
+            <p>Escreva o nome dos filmes corretamente, colocando a acentuação.</p>
             <p>Boa sorte e vamos começar!</p>
     </div>
   )
