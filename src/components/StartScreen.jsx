@@ -9,9 +9,9 @@ import { GameRules } from './GameRules'
 export const StartScreen = ({ startGame }) => {
   return (
     <div className='start'>
-      <h1>WHAT'S THE MOVIE?</h1>
-      <p>Click the button below to start playing!</p>
-      <button onClick={startGame}>Let's Start</button>
+      <h1>QUAL É O FILME?</h1>
+      <p>Clique no botão abaixo para começar a jogar!</p>
+      <button onClick={startGame}>Iniciar</button>
       < GameRules />
     </div>
   )
