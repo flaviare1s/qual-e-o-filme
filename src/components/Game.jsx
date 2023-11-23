@@ -25,7 +25,7 @@ export function Game({ moviesData }) {
       console.log('Handling guess:', userGuess)
       if (!hasGuessed) {
         if (!userGuess.trim()) {
-          alert('Please make a guess!')
+          alert('Por favor, dê um palpite!')
           return
         }
   
@@ -34,7 +34,7 @@ export function Game({ moviesData }) {
           setScore(score + pointsEarned)
   
           if (currentMovieIndex < moviesData.length - 1) {
-            alert('Congratulations! You got the movie right!')
+            alert('Parabéns! Você acertou!')
             setTimeout(() => {
               setCurrentMovieIndex(currentMovieIndex + 1)
               setCurrentHintIndex(0)
@@ -51,10 +51,10 @@ export function Game({ moviesData }) {
           setLives(lives - 1)
   
           if (lives === 1) {
-            alert('You lost all your lives!')
+            alert('Você perdeu todas as vidas!')
             setShowOptions(true)
           } else {
-            alert('You lost a life!')
+            alert('Você perdeu uma vida!')
             setShowOptions(true)
           }
   
@@ -127,10 +127,10 @@ export function Game({ moviesData }) {
       <div className='start'>
         {lives > 0 ? (
           <>
-            <h1>Score: {score}</h1>
-            <h2>Lives: {lives}</h2>
-            <p className='hints_control'>Hint: {currentMovie.hints[currentHintIndex]}</p>
-            <p className='hints_control'>Remaining Hints: {Math.max(remainingHints, 0)}</p>
+            <h1>Placar: {score}</h1>
+            <h2>Vidas: {lives}</h2>
+            <p className='hints_control'>Dica: {currentMovie.hints[currentHintIndex]}</p>
+            <p className='hints_control'>Dicas Restantes: {Math.max(remainingHints, 0)}</p>
   
             {congratulationsMessage && <p>{congratulationsMessage}</p>}
             {lossMessage && <p>{lossMessage}</p>}
@@ -138,30 +138,30 @@ export function Game({ moviesData }) {
             {showGuessBox && !showOptions && (
               <form onSubmit={handleGuessSubmit}>
                 <label>
-                  <span className='guess_text'>Guess the Movie: </span> 
+                  <span className='guess_text'>Acerte o filme: </span> 
                   <input className='guess_box' type="text" value={guess} onChange={handleGuessChange} />
                 </label>
                 <p>
-                  <button type="submit">Take a guess</button>
+                  <button type="submit">Palpite</button>
                 </p>
               </form>
             )}
   
             {showOptions && (
               <div>
-                <p>Do you want another tip or do you want to change movie?</p>
+                <p>Você quer mais uma dica ou quer mudar de filme?</p>
                 <p>
-                  <button onClick={() => handleOptionClick('retry')}>Keep trying</button>
+                  <button onClick={() => handleOptionClick('retry')}>Continuar</button>
                 </p>
                 <p>
-                  <button onClick={() => handleOptionClick('changeMovie')}>Change movie</button>
+                  <button onClick={() => handleOptionClick('changeMovie')}>Mudar filme</button>
                 </p>
               </div>
             )}
   
             {showHints && (
               <div>
-                <h3>Hints:</h3>
+                <h3>Dicas:</h3>
                 <ol className='hints_box'>
                   {currentMovie.hints.slice(0, currentHintIndex + 1).map((hint, index) => (
                     <li key={index}>{hint}</li>
