@@ -3,13 +3,14 @@ import './GameRules.css'
 export const GameRules = () => {
   return (
     <div className='rules'>
-        <h2>Game Rules</h2>
-            <p>Try to guess the name of the movie.</p>
-            <p>I'll give you five tips.</p>
-            <p>With every wrong guess you lose a life.</p>
-            <p>Be careful, you only have ten lives.</p>
-            <p>You earn a higher score when you use fewer hints.</p>
-            <p>Good luck and let's get started!</p>
+        <h2>Regras do Jogo</h2>
+            <p>Tente adivinhar o nome do filme.</p>
+            <p>Você tem direito a cinco dicas.</p>
+            <p>A cada palpite errado, você perde uma vida.</p>
+            <p>Cuidado, você só tem dez vidas.</p>
+            <p>Você recebe mais pontos se usar menos dicas.</p>
+            <p>Escreva o nome dos filmes corretamente.</p>
+            <p>Boa sorte e vamos começar!</p>
     </div>
   )
 }
