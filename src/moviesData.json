@@ -1,63 +1,63 @@
 [
     {
         "id": 1,
-        "title": "Inception",
-        "hints": ["Five Levels", "Architect", "Dreams within dreams", "Leonardo DiCaprio", "Christopher Nolan"]
+        "title": "A Origem",
+        "hints": ["Cinco levels", "Arquiteta", "Sonhos em sonhos", "Leonardo DiCaprio", "Christopher Nolan"]
     },
     {
         "id": 2,
-        "title": "The Shawshank Redemption",
-        "hints": ["Inside the bible", "Prison escape", "Morgan Freeman", "Tim Robbins", "Stephen King"]
+        "title": "Um Sonho de Liberdade",
+        "hints": ["Dentro da Bíblia", "Fuga da prisão", "Morgan Freeman", "Tim Robbins", "Stephen King"]
       },
       {
         "id": 3,
-        "title": "The Lord Of The Rings",
-        "hints": ["Something really precious", "Something shall not pass", "Three stone trolls", "Sauron", "Tolkien"]
+        "title": "O Senhor dos Anéis",
+        "hints": ["Algo muito precioso", "Algo não deve passar", "Três trolls de pedra", "Sauron", "Tolkien"]
       },
       {
         "id": 4,
         "title": "Pulp Fiction",
-        "hints": ["Expensive milk shake", "A hidden watch", "Adrenaline in the chest", "Girl, You'll Be A Woman Soon", "Quentin Tarantino"]
+        "hints": ["Um milk-shake muito caro", "Um relógio escondido", "Adrenalina no peito", "Girl, You'll Be A Woman Soon", "Quentin Tarantino"]
       },
       {
         "id": 5,
-        "title": "Mission: Impossible",
-        "hints": ["Safe and sweat", "This hint will self destruct in five seconds", "Be careful with masks", "Ethan Hunt", "Tom Cruise"]
+        "title": "Missão Impossível",
+        "hints": ["Cofre e suor", "Essa dica se auto-destruirá em cinco segundos", "Cuidado com as máscaras", "Ethan Hunt", "Tom Cruise"]
       },
       {
         "id": 6,
-        "title": "Scream",
-        "hints": ["Deadly phone call", "Being a virgin gives you an advantage", "Ghostface", "Homage to classic horror films", "There were several sequels"]
+        "title": "Pânico",
+        "hints": ["Telefonema mortal", "Ser virgen gera vantagem", "Ghostface", "Homenagem aos filmes de terror", "Teve várias sequências"]
       },
       {
         "id": 7,
-        "title": "Terminator 3: Rise of the Machines",
-        "hints": ["Talk to the hand", "Skynet", "Humans versus AI", "Sarah Connor", "Arnold Schwarzenegger"]
+        "title": "O Exterminador do Futuro",
+        "hints": ["Fale com a mão", "Skynet", "Humanos versus IA", "Sarah Connor", "Arnold Schwarzenegger"]
       },
       {
         "id": 8,
         "title": "Seven",
-        "hints": ["Wrath makes you lose your head", "Do not be lazy", "Two cops", "David Fincher", "Brad Pitt"]
+        "hints": ["A ira pode fazer perder a cabeça", "Não seja preguiçoso", "Dois policiais", "David Fincher", "Brad Pitt"]
       },
       {
         "id": 9,
-        "title": "Hunger Games",
-        "hints": ["I'm listen to the mockingjays", "teste", "teste", "teste", "teste"]
+        "title": "Jogos Vorazes",
+        "hints": ["Eu estou ouvindo os tordos", "Gostam de moda na Capital", "Um vestido em chamas", "Katniss", "Baseado em uma série de livros"]
       },
       {
         "id": 10,
-        "title": "Saw",
-        "hints": ["A puppet clown riding a bicycle", "Sadistic traps", "A long time in a bathroom", "James Wan", "This film marks the beginning of a highly successful horror franchise"]
+        "title": "SJogos Mortais",
+        "hints": ["Um boneco palhaço em um velocípede", "Armadilhas sádicas", "Um longo tempo em um banheiro", "James Wan", "Se tornou uma franquia de sucesso"]
       },
       {
         "id": 11,
-        "title": "Interstellar",
-        "hints": ["Books falling from the shelf", "teste", "teste", "teste", "teste"]
+        "title": "Interestelar",
+        "hints": ["Livros caindo da prateleira", "Diferentes dimensões", "Problemas ambientais", "Ficção Científica", "Christopher Nolan"]
       },
       {
         "id": 12,
-        "title": "Meet the Parents",
-        "hints": ["A cat named Jinx", "Mr. Focker?", "teste", "teste", "teste", "teste"]
+        "title": "Entrando Numa Fria",
+        "hints": ["Um gato chamado Jinx", "Sr. Focker?", "Casa dos sogros", "Um futuro casamento", "Bem Stiller", "Robert De Niro"]
       }
 ]
   
