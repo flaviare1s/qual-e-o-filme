@@ -1,0 +1,15 @@
+.rules {
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.526);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.rules p {
+    color: white;
+    font-weight: normal;
+    font-size: 1em;
+
+}
