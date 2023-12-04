@@ -1,74 +1,99 @@
 [
     {
-        "id": 1,
-        "title": "A Origem",
-        "hints": ["Cinco levels", "Arquiteta", "Sonhos em sonhos", "Leonardo DiCaprio", "Christopher Nolan"]
+      "id": 1,
+      "title": "A Origem",
+      "hints": ["Cinco levels", "Arquiteta", "Sonhos em sonhos", "Leonardo DiCaprio", "Christopher Nolan"]
     },
     {
-        "id": 2,
-        "title": "Um Sonho de Liberdade",
-        "hints": ["Dentro da Bíblia", "Fuga da prisão", "Morgan Freeman", "Tim Robbins", "Stephen King"]
-      },
-      {
-        "id": 3,
-        "title": "O Senhor dos Anéis",
-        "hints": ["Algo muito precioso", "Algo não deve passar", "Três trolls de pedra", "Sauron", "Tolkien"]
-      },
-      {
-        "id": 4,
-        "title": "Pulp Fiction",
-        "hints": ["Um milk-shake muito caro", "Um relógio escondido", "Adrenalina no peito", "Girl, You'll Be A Woman Soon", "Quentin Tarantino"]
-      },
-      {
-        "id": 5,
-        "title": "Missão Impossível",
-        "hints": ["Cofre e suor", "Essa dica se auto-destruirá em cinco segundos", "Cuidado com as máscaras", "Ethan Hunt", "Tom Cruise"]
-      },
-      {
-        "id": 6,
-        "title": "Pânico",
-        "hints": ["Telefonema mortal", "Ser virgen gera vantagem", "Ghostface", "Homenagem aos filmes de terror", "Teve várias sequências"]
-      },
-      {
-        "id": 7,
-        "title": "O Exterminador do Futuro",
-        "hints": ["Fale com a mão", "Skynet", "Humanos versus IA", "Sarah Connor", "Arnold Schwarzenegger"]
-      },
-      {
-        "id": 8,
-        "title": "Seven",
-        "hints": ["A ira pode fazer perder a cabeça", "Não seja preguiçoso", "Dois policiais", "David Fincher", "Brad Pitt"]
-      },
-      {
-        "id": 9,
-        "title": "Jogos Vorazes",
-        "hints": ["Eu estou ouvindo os tordos", "Gostam de moda na Capital", "Um vestido em chamas", "Katniss", "Baseado em uma série de livros"]
-      },
-      {
-        "id": 10,
-        "title": "Jogos Mortais",
-        "hints": ["Um boneco palhaço em um velocípede", "Armadilhas sádicas", "Um longo tempo em um banheiro", "James Wan", "Se tornou uma franquia de sucesso"]
-      },
-      {
-        "id": 11,
-        "title": "Interestelar",
-        "hints": ["Livros caindo da prateleira", "Diferentes dimensões", "Problemas ambientais", "Ficção Científica", "Christopher Nolan"]
-      },
-      {
-        "id": 12,
-        "title": "Entrando Numa Fria",
-        "hints": ["Um gato chamado Jinx", "Sr. Focker?", "Um futuro casamento", "Bem Stiller", "Robert De Niro"]
-      },
-      {
-        "id": 13,
-        "title": "300",
-        "hints": ["Um mensageiro persa", "Elefantes de guerra", "Grécia", "O nome do filme é um número", "Leônidas"]
-      },
-      {
-        "id": 14,
-        "title": "A Bela e a Fera",
-        "hints": ["Uma rosa muito preciosa", "Pequena aldeia na França", "Relógio, bule e castiçal", "Um Castelo Encantado", "Disney"]
-      }
+      "id": 2,
+      "title": "Um Sonho de Liberdade",
+      "hints": ["Dentro da Bíblia", "Fuga da prisão", "Morgan Freeman", "Tim Robbins", "Stephen King"]
+    },
+    {
+      "id": 3,
+      "title": "O Senhor dos Anéis",
+      "hints": ["Algo muito precioso", "Algo não deve passar", "Três trolls de pedra", "Sauron", "Tolkien"]
+    },
+    {
+      "id": 4,
+      "title": "Pulp Fiction",
+      "hints": ["Um milk-shake muito caro", "Um relógio escondido", "Adrenalina no peito", "Girl, You'll Be A Woman Soon", "Quentin Tarantino"]
+    },
+    {
+      "id": 5,
+      "title": "Missão Impossível",
+      "hints": ["Cofre e suor", "Essa dica se auto-destruirá em cinco segundos", "Cuidado com as máscaras", "Ethan Hunt", "Tom Cruise"]
+    },
+    {
+      "id": 6,
+      "title": "Pânico",
+      "hints": ["Telefonema mortal", "Ser virgen gera vantagem", "Ghostface", "Homenagem aos filmes de terror", "Teve várias sequências"]
+    },
+    {
+      "id": 7,
+      "title": "O Exterminador do Futuro",
+      "hints": ["Fale com a mão", "Skynet", "Humanos versus IA", "Sarah Connor", "Arnold Schwarzenegger"]
+    },
+    {
+      "id": 8,
+      "title": "Seven",
+      "hints": ["A ira pode fazer perder a cabeça", "Não seja preguiçoso", "Dois policiais", "David Fincher", "Brad Pitt"]
+    },
+    {
+      "id": 9,
+      "title": "Jogos Vorazes",
+      "hints": ["Eu estou ouvindo os tordos", "Gostam de moda na Capital", "Um vestido em chamas", "Katniss", "Baseado em uma série de livros"]
+    },
+    {
+      "id": 10,
+      "title": "Jogos Mortais",
+      "hints": ["Um boneco palhaço em um velocípede", "Armadilhas sádicas", "Um longo tempo em um banheiro", "James Wan", "Se tornou uma franquia de sucesso"]
+    },
+    {
+      "id": 11,
+      "title": "Interestelar",
+      "hints": ["Livros caindo da prateleira", "Diferentes dimensões", "Problemas ambientais", "Ficção Científica", "Christopher Nolan"]
+    },
+    {
+      "id": 12,
+      "title": "Entrando Numa Fria",
+      "hints": ["Um gato chamado Jinx", "Sr. Focker?", "Um futuro casamento", "Bem Stiller", "Robert De Niro"]
+    },
+    {
+      "id": 13,
+      "title": "300",
+      "hints": ["Um mensageiro persa", "Elefantes de guerra", "Grécia", "O nome do filme é um número", "Leônidas"]
+    },
+    {
+      "id": 14,
+      "title": "A Bela e a Fera",
+      "hints": ["Uma rosa muito preciosa", "Pequena aldeia na França", "Relógio, bule e castiçal", "Um Castelo Encantado", "Disney"]
+    },
+    {
+      "id": 15,
+      "title": "Kill Bill",
+      "hints": ["O filme tem duas partes", "Mamba Negra", "Sede de vingança", "Pai Mei", "Quentin Tarantino"]
+    },
+    {
+      "id": 16,
+      "title": "A Hora do Pesadelo",
+      "hints": ["Rua Elm", "Sonhos perigosos", "Queimado vivo", "Um famoso Freddy", "Wes Craven"]
+    },
+    {
+      "id": 17,
+      "title": "A Noviça Rebelde",
+      "hints": ["Um famoso musical", "Fraulein Maria", "Família Von Trapp", "Domínio nazista", "O som da música"]
+    },
+    {
+      "id": 18,
+      "title": "Harry Potter",
+      "hints": ["Um castelo na Inglaterra", "Três amigos inseparáveis", "Cicatriz em forma de raio", "Bruxos e trouxas", "Você sabe quem é o vilão"]
+    },
+    {
+      "id": 19,
+      "title": "Harry Potter",
+      "hints": ["Um castelo na Inglaterra", "Três amigos inseparáveis", "Cicatriz em forma de raio", "Bruxos e trouxas", "Você sabe quem é o vilão"]
+    }
 ]
   
   
