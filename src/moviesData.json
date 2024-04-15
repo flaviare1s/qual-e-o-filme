@@ -98,6 +98,31 @@
       "id": 20,
       "title": "A Profecia",
       "hints": ["Damien Thorn", "Uma criança substituída", "666", "Um padre importante", "Anticristo"]
+    },
+    {
+      "id": 21,
+      "title": "Linha Mortal",
+      "hints": ["Experiências de quase morte", "Famoso suspense da década de 90","Segredos do passado", "Cinco estudantes de medicina curiosos", "Joel Schumacher"]
+    },
+    {
+      "id": 22,
+      "title": "Os Caça-Fantasmas",
+      "hints": ["Homem Marshmallow", "Trilha sonora icônica de Ray Parker Jr.", "Ghosts", "Nova Iorque", "Sigourney Weaver e Bill Murray"]
+    },
+    {
+      "id": 23,
+      "title": "Uma Linda Mulher",
+      "hints": ["Beverly Hills", "Uma famosa história de amor da década de 90", "Uma canção memorável", "Cinderela moderna", "Julia Roberts e Richard Gere"]
+    },
+    {
+      "id": 24,
+      "title": "Entrevista Com o Vampiro",
+      "hints": ["Sede de sangue", "Tom Cruise e Brad Pitt", "Lestat e Louis", "Vampiros", "Anne Rice"]
+    },
+    {
+      "id": 25,
+      "title": "Ghost",
+      "hints": ["O amor transcende a morte", "Famosa cena com cerâmica", "Comunicação com espíritos", "Rendeu um Oscar a Whoopi Goldberg", "Patrick Swayze e Demi Moore"]
     }
 ]
   
