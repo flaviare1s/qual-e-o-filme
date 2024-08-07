@@ -35,6 +35,9 @@ Para rodar o projeto localmente, siga os passos abaixo:
 3. Instale as dependências:
    npm install
 
+## Como jogar:
+Jogue através do link abaixo:
+https://qual-e-o-filme.vercel.app/
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
