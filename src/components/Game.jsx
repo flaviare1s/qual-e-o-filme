@@ -37,7 +37,7 @@ export function Game({ moviesData }) {
           setScore(score + pointsEarned);
     
           if (currentMovieIndex < moviesData.length - 1) {
-            toast.custom(`Parabéns! ${pointsEarned} pontos adicionados!`);
+            toast.success(`Parabéns! ${pointsEarned} pontos adicionados!`);
             setTimeout(() => {
               setCurrentMovieIndex(currentMovieIndex + 1);
               setCurrentHintIndex(0);
@@ -57,7 +57,7 @@ export function Game({ moviesData }) {
             toast.error('Você perdeu todas as vidas!')
             setShowOptions(true);
           } else {
-            toast.custom('Você perdeu uma vida! Tente novamente');
+            toast.error('Você perdeu uma vida! Tente novamente');
             setShowOptions(true);
           }
     
