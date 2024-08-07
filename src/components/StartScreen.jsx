@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 import './StartScreen.css'
 import { GameRules } from './GameRules'
 
