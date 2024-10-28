@@ -22,7 +22,6 @@ O objetivo do jogo é adivinhar o nome do filme utilizando as cinco dicas fornec
 - CSS
 - React
 - JavaScript
-- Inteligência Artificial
 
 ## Como Executar o Projeto
 
