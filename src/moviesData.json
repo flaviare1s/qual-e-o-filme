@@ -123,6 +123,17 @@
       "id": 25,
       "title": "Ghost",
       "hints": ["O amor transcende a morte", "Famosa cena com cerâmica", "Comunicação com espíritos", "Rendeu um Oscar a Whoopi Goldberg", "Patrick Swayze e Demi Moore"]
+    },
+    {
+      "id": 26,
+      "title": "Die Hard",
+      "hints": [
+        "Véspera de Natal",
+        "Um policial",
+        "Um terrorista",
+        "John McClane",
+        "Bruce Willis"
+      ]
     }
 ]
   
