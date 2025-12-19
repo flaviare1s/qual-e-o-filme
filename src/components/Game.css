@@ -1,45 +1,164 @@
-.hints_box {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 15px;
+.start-game {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);border-radius: 15px;
+}
+
+.start-game h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 1px;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hints_box {
+
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 ol {
-  margin: auto;
+  margin: 0;
+  padding-left: 25px;
 }
 
 li::marker {
   color: #ffd700;
-}
-
-li {
-  margin-bottom: 8px;
-  list-style-position: inside;
-  text-align: justify;
-  font-weight: 600;
-}
-
-p.guess_text {
-  font-size: 1.2em;
   font-weight: bold;
 }
 
-.guess_box {
-  border-radius: 6px;
-  padding: 8px;
+li {
+  margin-bottom: 12px;
+  text-align: left;
+  font-weight: 600;
+  line-height: 1.6;
+  color: white;
 }
 
-.guess_box input {
-  font-size: 16px;
+li:last-child {
+  margin-bottom: 0;
+}
+
+p.guess_text {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.guess_box {
   width: 100%;
-  background: transparent;
-  border: none;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 16px;
   color: white;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
   outline: none;
+  transition: all 0.3s ease;
+}
+
+.guess_box:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+.guess_box::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 p.hints_control {
   color: white;
-  text-shadow: 2px 2px 2px rgb(161, 1, 1);
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 15px;
+}
+
+.start form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.start form label {
+  display: block;
+  width: 100%;
+}
+
+.start form p {
+  margin: 20px 0;
+}
+
+.options-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.options-container p {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .start-game h3 {
+    font-size: 1.3em;
+  }
+
+  .hints_box {
+    padding: 20px;
+  }
+
+  p.guess_text {
+    font-size: 1.2em;
+  }
+
+  p.hints_control {
+    font-size: 1.05em;
+    padding: 12px;
+  }
+
+  .guess_box {
+    padding: 12px 15px;
+  }
+
+  .options-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hints_box {
+    padding: 18px;
+  }
+
+  p.hints_control {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  .options-container {
+    padding: 18px;
+  }
 }
