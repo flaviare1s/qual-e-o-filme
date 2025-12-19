@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import './GameOver.css'
 
 export function GameOver({ onRestart }) {
   return (
-    <div>
+    <div className='game-over'>
       <h1>Game Over!</h1>
       <p>Você perdeu todas as vidas.</p>
       <button onClick={onRestart}>Reiniciar</button>
