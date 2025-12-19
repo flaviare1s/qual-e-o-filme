@@ -2,16 +2,24 @@
 import './Game.css'
 import { useState, useEffect } from 'react'
 
-import { GameOver } from './GameOver'
 import { GameHeader } from './GameHeader'
+import { Statistics } from './Statistics'
 import toast from 'react-hot-toast';
 import { FaLightbulb } from 'react-icons/fa';
 
-export function Game({ moviesData }) {
-  const [currentMovieIndex, setCurrentMovieIndex] = useState(0)
-  const [currentHintIndex, setCurrentHintIndex] = useState(0)
-  const [score, setScore] = useState(0)
-  const [lives, setLives] = useState(10)
+export function Game({ moviesData, onBackToMenu }) {
+  const [currentMovieIndex, setCurrentMovieIndex] = useState(() => {
+    return parseInt(localStorage.getItem('currentMovieIndex')) || 0
+  })
+  const [currentHintIndex, setCurrentHintIndex] = useState(() => {
+    return parseInt(localStorage.getItem('currentHintIndex')) || 0
+  })
+  const [score, setScore] = useState(() => {
+    return parseInt(localStorage.getItem('currentScore')) || 0
+  })
+  const [lives, setLives] = useState(() => {
+    return parseInt(localStorage.getItem('currentLives')) || 10
+  })
   const [guess, setGuess] = useState('')
   const [congratulationsMessage, setCongratulationsMessage] = useState('')
   const [lossMessage, setLossMessage] = useState('')
@@ -19,10 +27,30 @@ export function Game({ moviesData }) {
   const [hasGuessed, setHasGuessed] = useState(false)
   const [showGuessBox, setShowGuessBox] = useState(true)
   const [showHints, setShowHints] = useState(true)
+  const [showStatistics, setShowStatistics] = useState(false)
+  const [isVictory, setIsVictory] = useState(false)
 
   const currentMovie = moviesData[currentMovieIndex]
   const totalHints = currentMovie.hints.length
   const remainingHints = totalHints - currentHintIndex - 1
+
+  useEffect(() => {
+    localStorage.setItem('currentMovieIndex', currentMovieIndex)
+    localStorage.setItem('currentHintIndex', currentHintIndex)
+    localStorage.setItem('currentScore', score)
+    localStorage.setItem('currentLives', lives)
+  }, [currentMovieIndex, currentHintIndex, score, lives])
+
+  const saveStatistics = (victory) => {
+    const stats = JSON.parse(localStorage.getItem('movieGameStats') || '{}')
+    const newStats = {
+      highScore: Math.max(stats.highScore || 0, score),
+      gamesPlayed: (stats.gamesPlayed || 0) + 1,
+      gamesWon: (stats.gamesWon || 0) + (victory ? 1 : 0),
+      totalScore: (stats.totalScore || 0) + score
+    }
+    localStorage.setItem('movieGameStats', JSON.stringify(newStats))
+  }
 
   const handleGuess = (userGuess) => {
     console.log('Handling guess:', userGuess);
@@ -51,7 +79,9 @@ export function Game({ moviesData }) {
           }, 500);
         } else {
           setCongratulationsMessage('Você finalizou o jogo!');
-          setShowOptions(true);
+          saveStatistics(true);
+          setIsVictory(true);
+          setShowStatistics(true);
         }
       } else {
         setLives(lives - 1);
@@ -92,12 +122,22 @@ export function Game({ moviesData }) {
         setShowHints(true)
       } else {
         setCongratulationsMessage('Parabéns! Você finalizou o jogo!')
-        setShowOptions(true)
+        saveStatistics(true);
+        setIsVictory(true);
+        setShowStatistics(true);
       }
     }
   }
 
+  const clearProgress = () => {
+    localStorage.removeItem('currentMovieIndex')
+    localStorage.removeItem('currentHintIndex')
+    localStorage.removeItem('currentScore')
+    localStorage.removeItem('currentLives')
+  }
+
   const handleRestart = () => {
+    clearProgress()
     setCurrentMovieIndex(0)
     setCurrentHintIndex(0)
     setScore(0)
@@ -125,13 +165,27 @@ export function Game({ moviesData }) {
 
     if (lives === 0 && !congratulationsMessage) {
       setLossMessage('Game Over!')
-      setShowOptions(true)
+      saveStatistics(false)
+      setShowStatistics(true)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lives, congratulationsMessage])
+
+  const handleBackToMenu = () => {
+    clearProgress()
+    onBackToMenu()
+  }
 
   return (
     <>
-      {lives > 0 ? (
+      {showStatistics ? (
+        <Statistics
+          currentScore={score}
+          onRestart={handleRestart}
+          onBackToMenu={handleBackToMenu}
+          isVictory={isVictory}
+        />
+      ) : lives > 0 ? (
         <>
           {!showOptions ? (
             <div className='start-game'>
@@ -177,9 +231,7 @@ export function Game({ moviesData }) {
             </div>
           )}
         </>
-      ) : (
-        <GameOver onRestart={handleRestart} />
-      )}
+      ) : null}
     </>
   )
 }
