@@ -1,18 +1,19 @@
-html, body {
-    height: 100%;
-  }
-  
+html,
+body {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: auto;
   font-family: "Montserrat", sans-serif;
   padding: 0;
-  background-image: url('/public/images/background.jpg');
+  background-image: url("/public/images/background.jpg");
   background-size: cover;
   color: white;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 }
 
 button {
-  background-color: #8B0000;
+  background-color: #8b0000;
   color: #ffffff;
   padding: 0 30px;
   border: 2px solid white;
@@ -31,9 +32,9 @@ button {
   font-size: 1em;
   letter-spacing: 1.5px;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 button:hover {
-  background-color: #A40000;
+  background-color: #a40000;
 }

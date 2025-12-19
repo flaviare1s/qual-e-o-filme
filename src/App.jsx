@@ -4,6 +4,7 @@ import { StartScreen } from './components/StartScreen'
 import { Game } from './components/Game'
 import moviesData from './moviesData.json'
 import { Toaster } from 'react-hot-toast'
+import { Footer } from './components/Footer'
 
 const stages = [
   { id: 1, name: 'start' },
@@ -32,11 +33,14 @@ export function App() {
   }
 
   return (
-    <div className='App'>
-      <div className="overlay" />
-      {gameStage === 'start' && <StartScreen startGame={startGame} />}
-      {gameStage === 'game' && <Game moviesData={shuffledMovies} onBackToMenu={backToMenu} />}
-      <Toaster position='top-center' />
+    <div className='main'>
+      <div className='App'>
+        <div className="overlay" />
+        {gameStage === 'start' && <StartScreen startGame={startGame} />}
+        {gameStage === 'game' && <Game moviesData={shuffledMovies} onBackToMenu={backToMenu} />}
+        <Toaster position='top-center' />
+      </div>
+      <Footer />
     </div>
   )
 }
