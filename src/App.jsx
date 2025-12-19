@@ -29,6 +29,7 @@ export function App() {
 
   return (
     <div className='App'>
+      <div className="overlay" />
       {gameStage === 'start' && <StartScreen startGame={startGame} />}
       {gameStage === 'game' && <Game moviesData={shuffledMovies} />}
       <Toaster position='top-center' />
