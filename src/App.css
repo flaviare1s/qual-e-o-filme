@@ -10,3 +10,9 @@
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .App {
+    padding: 50px 0;
+  }
+}
+
