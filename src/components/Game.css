@@ -1,6 +1,6 @@
 
 .hints_box {
-    background-color: rgba(0, 0, 0, 0.526);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     padding: 20px;
     width: 300px;
@@ -10,10 +10,15 @@ ol {
    margin: auto;
 }
 
+li::marker {
+    color: #FFD700;
+}
+
 li {
     margin-bottom: 8px;
     list-style-position: inside;
     text-align: justify;
+    font-weight: 600;
 }
 
 p.guess_text {
