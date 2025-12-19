@@ -57,7 +57,7 @@
 
 @media (max-width: 768px) {
   .game-header {
-    top: 10px;
+    top: 20px;
     right: 10px;
     gap: 10px;
   }
@@ -84,7 +84,7 @@
 
 @media (max-width: 480px) {
   .game-header {
-    top: 8px;
+    top: 20px;
     right: 8px;
     gap: 8px;
   }

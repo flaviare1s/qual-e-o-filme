@@ -34,7 +34,7 @@
 
 @media (max-width: 600px) {
   .App {
-    padding-top: 100px;
+    padding-top: 10px;
     width: 90vw;
   }
 }
