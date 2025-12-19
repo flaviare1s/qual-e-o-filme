@@ -22,6 +22,10 @@
     color: #FFD700;
 }
 
+.rules ul {
+    margin-left: -20px;
+}
+
 .rules li {
     font-weight: 600;
     font-size: 1em;

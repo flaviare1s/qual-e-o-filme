@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: auto;
   font-family: "Montserrat", sans-serif;
   padding: 0;
   background-image: url('/public/images/background.jpg');
