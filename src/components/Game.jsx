@@ -191,9 +191,13 @@ export function Game({ moviesData, onBackToMenu }) {
             <div className='start-game'>
               <GameHeader score={score} lives={lives} remainingHints={remainingHints} />
 
-              {currentMovie.hints.length > 0 && currentHintIndex < currentMovie.hints.length &&
+              {currentMovie.hints.length > 0 && currentHintIndex < currentMovie.hints.length ? (
                 <p className='hints_control'><FaLightbulb className="bulb-hint" />{currentMovie.hints[currentHintIndex]}</p>
-              }
+              ) : currentHintIndex >= currentMovie.hints.length && (
+                <p style={{ color: '#ff6b6b', fontWeight: 'bold', fontSize: '18px', marginTop: '20px' }}>
+                  Você não tem mais dicas disponíveis!
+                </p>
+              )}
 
               {congratulationsMessage && <p>{congratulationsMessage}</p>}
               {lossMessage && <p>{lossMessage}</p>}
@@ -201,7 +205,7 @@ export function Game({ moviesData, onBackToMenu }) {
               {showGuessBox && (
                 <form onSubmit={handleGuessSubmit}>
                   <label>
-                    <p className='guess_text'>Acerte o filme: </p>
+                    <p className='guess_text'> Qual é o filme? </p>
                     <input className='guess_box' type="text" value={guess} onChange={handleGuessChange} placeholder="Digite seu palpite..." />
                   </label>
                   <p>
@@ -210,11 +214,11 @@ export function Game({ moviesData, onBackToMenu }) {
                 </form>
               )}
 
-              {showHints && (
+              {showHints && currentHintIndex > 0 && (
                 <div>
-                  <h3>Dicas:</h3>
+                    <h3 className='previous_hints'>Dicas anteriores:</h3>
                   <ol className='hints_box'>
-                    {currentMovie.hints.slice(0, currentHintIndex + 1).map((hint, index) => (
+                    {currentMovie.hints.slice(0, currentHintIndex).map((hint, index) => (
                       <li key={index}>{hint}</li>
                     ))}
                   </ol>
@@ -226,10 +230,10 @@ export function Game({ moviesData, onBackToMenu }) {
               <p>Que pena, você perdeu uma vida!</p>
               <p>Quer mais uma dica ou quer mudar de filme?</p>
               <p>
-                <button style={{width: '220px'}} onClick={() => handleOptionClick('retry')}>Continuar</button>
+                <button style={{ width: '220px' }} onClick={() => handleOptionClick('retry')}>Continuar</button>
               </p>
               <p>
-                <button style={{width: '220px'}} onClick={() => handleOptionClick('changeMovie')}>Mudar filme</button>
+                <button style={{ width: '220px' }} onClick={() => handleOptionClick('changeMovie')}>Mudar filme</button>
               </p>
             </div>
           )}

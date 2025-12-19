@@ -94,6 +94,10 @@ p.hints_control {
   padding: 15px;
 }
 
+.previous_hints {
+  text-align: left;
+}
+
 .start form {
   width: 100%;
   margin: 0 auto;
@@ -121,7 +125,7 @@ p.hints_control {
   color: white;
   font-size: 1.1em;
   font-weight: 600;
-  margin: 15px 0;
+  margin: 20px 10px;
 }
 
 @media (max-width: 768px) {
