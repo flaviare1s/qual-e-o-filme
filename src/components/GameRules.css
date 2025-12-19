@@ -1,15 +1,29 @@
+.rules-wrapper {
+    margin: 20px;
+}
+
 .rules {
-    width: 300px;
+    max-width: 500px;
     margin: auto;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.526);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     margin-top: 20px;
 }
 
+.rules h2 {
+    margin-bottom: 40px;
+}
+
 .rules p {
     color: white;
-    font-weight: normal;
+    font-weight: 600;
     font-size: 1em;
+    text-align: left;
+}
 
+@media (max-width: 600px) {
+    .rules p {
+        font-size: 0.9em;
+    }
 }

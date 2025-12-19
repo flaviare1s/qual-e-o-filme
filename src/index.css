@@ -3,16 +3,24 @@ html, body {
   }
   
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: o;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
   background-image: url('/public/images/background.jpg');
   background-size: cover;
   color: white;
 }
 
+h1 {
+  font-family: "Oswald", sans-serif;
+}
+
 button {
-  background-color: red;
+  background-color: #8B0000;
   color: #ffffff;
   padding: 0 35px;
   border: 2px solid white;
@@ -27,5 +35,5 @@ button {
 }
 
 button:hover {
-  background-color: darkred;
+  background-color: #A40000;
 }

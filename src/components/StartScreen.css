@@ -1,20 +1,32 @@
 .start {
-    width: 98vw;
+    width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.353);
+    background-color: rgba(0, 0, 0, 0.58);
 }
 
 .start h1 {
     font-size: 3.5em;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.352);
+    padding: 0 20px;
   }
 
   .start p {
     margin-bottom: 32px;
-    color: red;
-    text-shadow: 1px 1px 1px black;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-size: 20px;
     font-weight: bold;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 500px) {
+    .start h1 {
+      font-size: 2.5em;
+    }
+  
+    .start p {
+      font-size: 16px;
+    }
   }
 
   

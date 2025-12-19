@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './StartScreen.css'
 import { GameRules } from './GameRules'
 
