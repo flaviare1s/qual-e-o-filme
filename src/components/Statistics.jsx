@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import './Statistics.css'
 
-export function Statistics({ currentScore, onRestart, onBackToMenu, isVictory = false }) {
+export function Statistics({ currentScore, onBackToMenu, isVictory = false }) {
   const stats = JSON.parse(localStorage.getItem('movieGameStats') || '{}')
   const highScore = stats.highScore || 0
   const gamesPlayed = stats.gamesPlayed || 0
@@ -49,8 +49,7 @@ export function Statistics({ currentScore, onRestart, onBackToMenu, isVictory = 
       </div>
 
       <div className='stats-buttons'>
-        <button onClick={onRestart}>Jogar Novamente</button>
-        <button onClick={onBackToMenu}>Menu Principal</button>
+        <button onClick={onBackToMenu}>Reiniciar</button>
       </div>
     </div>
   )
