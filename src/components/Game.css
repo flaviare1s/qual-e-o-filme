@@ -1,37 +1,45 @@
-
 .hints_box {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    padding: 20px;
-    width: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
 }
 
 ol {
-   margin: auto;
+  margin: auto;
 }
 
 li::marker {
-    color: #FFD700;
+  color: #ffd700;
 }
 
 li {
-    margin-bottom: 8px;
-    list-style-position: inside;
-    text-align: justify;
-    font-weight: 600;
+  margin-bottom: 8px;
+  list-style-position: inside;
+  text-align: justify;
+  font-weight: 600;
 }
 
 p.guess_text {
-    font-size: 1.2em;
-    font-weight: bold;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .guess_box {
-    border-radius: 6px;
-    padding: 8px;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.guess_box input {
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
 }
 
 p.hints_control {
-    color: white;
-    text-shadow: 2px 2px 2px rgb(161, 1, 1);
+  color: white;
+  text-shadow: 2px 2px 2px rgb(161, 1, 1);
 }
