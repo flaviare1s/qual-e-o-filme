@@ -25,6 +25,6 @@
 
 @media (max-width: 600px) {
   .App {
-    padding: 20px 0;
+    padding-top: 100px;
   }
 }
