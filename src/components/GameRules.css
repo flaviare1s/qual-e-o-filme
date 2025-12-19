@@ -12,18 +12,25 @@
 }
 
 .rules h2 {
-    margin-bottom: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0 20px 10px 20px;
+    border-bottom: 2px solid #FFD700;
 }
 
-.rules p {
-    color: white;
+.rules li::marker {
+    color: #FFD700;
+}
+
+.rules li {
     font-weight: 600;
     font-size: 1em;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
-    .rules p {
+    .rules li {
         font-size: 0.9em;
     }
 }
