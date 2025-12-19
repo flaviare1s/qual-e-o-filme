@@ -130,29 +130,42 @@ export function Game({ moviesData }) {
   }, [lives, congratulationsMessage])
 
   return (
-    <div className='start-game'>
+    <>
       {lives > 0 ? (
         <>
-          <GameHeader score={score} lives={lives} remainingHints={remainingHints} />
+          {!showOptions ? (
+            <div className='start-game'>
+              <GameHeader score={score} lives={lives} remainingHints={remainingHints} />
 
-          <p className='hints_control'><FaLightbulb className="header-icon bulb-icon" />{currentMovie.hints[currentHintIndex]}</p>
+              <p className='hints_control'><FaLightbulb className="bulb-hint" />{currentMovie.hints[currentHintIndex]}</p>
 
-          {congratulationsMessage && <p>{congratulationsMessage}</p>}
-          {lossMessage && <p>{lossMessage}</p>}
+              {congratulationsMessage && <p>{congratulationsMessage}</p>}
+              {lossMessage && <p>{lossMessage}</p>}
 
-          {showGuessBox && !showOptions && (
-            <form onSubmit={handleGuessSubmit}>
-              <label>
-                <p className='guess_text'>Acerte o filme: </p>
-                <input className='guess_box' type="text" value={guess} onChange={handleGuessChange} placeholder="Digite sua resposta..." />
-              </label>
-              <p>
-                <button type="submit">Palpite</button>
-              </p>
-            </form>
-          )}
+              {showGuessBox && (
+                <form onSubmit={handleGuessSubmit}>
+                  <label>
+                    <p className='guess_text'>Acerte o filme: </p>
+                    <input className='guess_box' type="text" value={guess} onChange={handleGuessChange} placeholder="Digite sua resposta..." />
+                  </label>
+                  <p>
+                    <button type="submit">Palpite</button>
+                  </p>
+                </form>
+              )}
 
-          {showOptions && (
+              {showHints && (
+                <div>
+                  <h3>Dicas:</h3>
+                  <ol className='hints_box'>
+                    {currentMovie.hints.slice(0, currentHintIndex + 1).map((hint, index) => (
+                      <li key={index}>{hint}</li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+            </div>
+          ) : !congratulationsMessage && (
             <div className='options-container'>
               <p>Você quer mais uma dica ou quer mudar de filme?</p>
               <p>
@@ -163,21 +176,10 @@ export function Game({ moviesData }) {
               </p>
             </div>
           )}
-
-          {showHints && (
-            <div>
-              <h3>Dicas:</h3>
-              <ol className='hints_box'>
-                {currentMovie.hints.slice(0, currentHintIndex + 1).map((hint, index) => (
-                  <li key={index}>{hint}</li>
-                ))}
-              </ol>
-            </div>
-          )}
         </>
       ) : (
         <GameOver onRestart={handleRestart} />
       )}
-    </div>
+    </>
   )
 }

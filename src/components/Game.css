@@ -1,9 +1,10 @@
 .start-game {
   width: 100%;
-  max-width: 600px;
+  width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 .start-game h3 {
@@ -16,7 +17,6 @@
 }
 
 .hints_box {
-
   border-radius: 15px;
   padding: 25px;
   width: 100%;
@@ -43,6 +43,12 @@ li {
 
 li:last-child {
   margin-bottom: 0;
+}
+
+.bulb-hint {
+  font-size: 15px;
+  color: #ffd700;
+  margin-right: 8px;
 }
 
 p.guess_text {
@@ -103,10 +109,12 @@ p.hints_control {
 }
 
 .options-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 25px;
   border-radius: 15px;
-  margin: 20px;
 }
 
 .options-container p {
@@ -144,7 +152,6 @@ p.hints_control {
 }
 
 @media (max-width: 480px) {
-
   .hints_box {
     padding: 18px;
   }
