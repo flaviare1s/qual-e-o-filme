@@ -223,7 +223,8 @@ export function Game({ moviesData, onBackToMenu }) {
             </div>
           ) : !congratulationsMessage && (
             <div className='options-container'>
-              <p>Você quer mais uma dica ou quer mudar de filme?</p>
+              <p>Que pena, você perdeu uma vida!</p>
+              <p>Quer mais uma dica ou quer mudar de filme?</p>
               <p>
                 <button onClick={() => handleOptionClick('retry')}>Continuar</button>
               </p>

@@ -36,7 +36,7 @@ export function App() {
       <div className="overlay" />
       {gameStage === 'start' && <StartScreen startGame={startGame} />}
       {gameStage === 'game' && <Game moviesData={shuffledMovies} onBackToMenu={backToMenu} />}
-      <Toaster position='top-center' />
+      <Toaster position='bottom-center' />
     </div>
   )
 }
