@@ -202,10 +202,10 @@ export function Game({ moviesData, onBackToMenu }) {
                 <form onSubmit={handleGuessSubmit}>
                   <label>
                     <p className='guess_text'>Acerte o filme: </p>
-                    <input className='guess_box' type="text" value={guess} onChange={handleGuessChange} placeholder="Digite sua resposta..." />
+                    <input className='guess_box' type="text" value={guess} onChange={handleGuessChange} placeholder="Digite seu palpite..." />
                   </label>
                   <p>
-                    <button type="submit">Palpite</button>
+                    <button type="submit">Enviar</button>
                   </p>
                 </form>
               )}
