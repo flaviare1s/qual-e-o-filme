@@ -11,12 +11,13 @@
 }
 
 .start-game h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.5em;
+  font-family: var(--font-display);
+  font-size: 1.7em;
+  letter-spacing: 0.03em;
   margin-top: 30px;
   margin-bottom: 1px;
-  color: #ffd700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: var(--gold);
+  text-shadow: var(--shadow-text);
 }
 
 .hints_box {
@@ -55,11 +56,13 @@ li:last-child {
 }
 
 p.guess_text {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #ffd700;
+  font-family: var(--font-display);
+  font-size: 1.9em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--gold);
   margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: var(--shadow-text);
 }
 
 .guess_box {
@@ -73,7 +76,7 @@ p.guess_text {
   font-size: 16px;
   color: white;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   outline: none;
   transition: all 0.3s ease;
 }

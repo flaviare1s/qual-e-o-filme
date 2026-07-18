@@ -85,11 +85,13 @@
 }
 
 .header-value {
-  font-size: 1.3em;
-  font-weight: bold;
+  font-size: 1.6em;
+  font-weight: 400;
   color: white;
-  font-family: "Oswald", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-shadow: var(--shadow-text);
 }
 
 @media (max-width: 768px) {

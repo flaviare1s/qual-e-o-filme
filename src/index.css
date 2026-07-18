@@ -1,4 +1,6 @@
 :root {
+  --font-display: "Bebas Neue", "Impact", sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
   --gold: #ffd700;
   --gold-soft: rgba(255, 215, 0, 0.3);
   --crimson: #8b0000;
@@ -22,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   padding: 0;
   background-image: url("/public/images/background.jpg");
   background-size: cover;
@@ -31,7 +33,8 @@ body {
 }
 
 h1 {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
 }
 
 button {
