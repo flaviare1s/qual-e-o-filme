@@ -9,7 +9,7 @@
   min-height: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--gold-soft);
+  border: 2px solid var(--gold-soft);
   border-radius: 999px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -64,8 +64,8 @@
   }
 
   .lang-seg {
-    min-height: 30px;
-    padding: 5px 13px;
-    font-size: 0.78em;
+    min-height: 25px;
+    padding: 5px 8.5px;
+    font-size: 0.72em;
   }
 }

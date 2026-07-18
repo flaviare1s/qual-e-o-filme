@@ -53,7 +53,6 @@
   padding: 0;
   min-height: 0;
   width: 46px;
-  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,5 +143,9 @@
 
   .header-value {
     font-size: 1em;
+  }
+  
+  .mute-btn {
+      height: 46px;
   }
 }
