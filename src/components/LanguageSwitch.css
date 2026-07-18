@@ -6,40 +6,55 @@
   display: inline-flex;
   gap: 4px;
   padding: 4px;
+  min-height: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   border: 1px solid var(--gold-soft);
   border-radius: 999px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: border-color 0.25s ease, transform 0.18s var(--ease-out-quart);
 }
 
-.lang-btn {
-  min-height: 38px;
-  padding: 8px 18px;
-  border: none;
+.lang-switch:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  filter: none;
+}
+
+.lang-switch:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.lang-switch:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Segmentos são apenas visuais; o botão inteiro é o alvo de clique. */
+.lang-seg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 16px;
   border-radius: 999px;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.85em;
   letter-spacing: 1px;
-  box-shadow: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.lang-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  transform: none;
-  box-shadow: none;
-  filter: none;
-}
-
-.lang-btn.active,
-.lang-btn.active:hover {
+.lang-seg.active {
   background: var(--gold);
   color: #1a1509;
-  transform: none;
 }
 
 @media (max-width: 768px) {
@@ -48,9 +63,9 @@
     left: 10px;
   }
 
-  .lang-btn {
-    min-height: 34px;
-    padding: 6px 13px;
+  .lang-seg {
+    min-height: 30px;
+    padding: 5px 13px;
     font-size: 0.78em;
   }
 }

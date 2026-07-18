@@ -28,3 +28,8 @@ export const normalizeTitle = (value) => {
 
 export const isCorrectGuess = (guess, title) =>
   normalizeTitle(guess) === normalizeTitle(title)
+
+// Aceita o palpite se ele bater com qualquer um dos títulos (ex.: o título em
+// português E em inglês do mesmo filme), independente do idioma selecionado.
+export const isCorrectGuessAny = (guess, titles) =>
+  titles.some((title) => isCorrectGuess(guess, title))

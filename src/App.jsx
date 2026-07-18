@@ -15,6 +15,17 @@ const stages = [
   { id: 3, name: 'end' },
 ]
 
+// Mapas id -> título em cada idioma, calculados uma vez.
+const titlesById = (data) => Object.fromEntries(data.map((m) => [m.id, m.title]))
+const ptTitles = titlesById(moviesData)
+const enTitles = titlesById(moviesDataEN)
+
+// Anexa os títulos aceitos (pt + en) a um filme, para acertar em qualquer idioma.
+const withAcceptedTitles = (movie) => ({
+  ...movie,
+  acceptedTitles: [ptTitles[movie.id], enTitles[movie.id]].filter(Boolean),
+})
+
 export function App() {
   const { lang } = useTranslation()
   const [gameStage, setGameStage] = useState(stages[0].name)
@@ -33,7 +44,7 @@ export function App() {
     const source = lang === 'en' ? moviesDataEN : moviesData
     const shuffledArray = [...source]
     shuffledArray.sort(() => Math.random() - 0.5)
-    return shuffledArray
+    return shuffledArray.map(withAcceptedTitles)
   }
 
   // Trocar de idioma no meio do jogo: mantém a ordem embaralhada e o índice
@@ -42,7 +53,9 @@ export function App() {
     setShuffledMovies((prev) => {
       if (prev.length === 0) return prev
       const source = lang === 'en' ? moviesDataEN : moviesData
-      return prev.map((movie) => source.find((m) => m.id === movie.id) || movie)
+      return prev.map((movie) =>
+        withAcceptedTitles(source.find((m) => m.id === movie.id) || movie)
+      )
     })
   }, [lang])
 

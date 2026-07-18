@@ -14,7 +14,7 @@ import {
   playClick,
 } from '../utils/sound'
 import { useTranslation } from '../i18n/context'
-import { isCorrectGuess } from '../utils/matchGuess'
+import { isCorrectGuessAny } from '../utils/matchGuess'
 
 export function Game({ moviesData, onBackToMenu }) {
   const { t } = useTranslation()
@@ -85,7 +85,9 @@ export function Game({ moviesData, onBackToMenu }) {
       return;
     }
 
-    if (isCorrectGuess(userGuess, currentMovie.title)) {
+    // Aceita o título em qualquer idioma (pt e en) para o filme atual.
+    const acceptedTitles = currentMovie.acceptedTitles || [currentMovie.title]
+    if (isCorrectGuessAny(userGuess, acceptedTitles)) {
       // Piso de 100: acertar nunca pode reduzir a pontuação, mesmo depois de
       // esgotar as dicas (currentHintIndex >= 5 tornaria 500 - n*100 <= 0).
       const pointsEarned = Math.max(500 - currentHintIndex * 100, 100);
@@ -213,16 +215,16 @@ export function Game({ moviesData, onBackToMenu }) {
         />
       ) : lives > 0 ? (
         <>
+          <GameHeader
+            score={score}
+            lives={lives}
+            remainingHints={remainingHints}
+            muted={muted}
+            onToggleMute={toggleMute}
+          />
+
           {!showOptions ? (
             <div className='start-game'>
-              <GameHeader
-                score={score}
-                lives={lives}
-                remainingHints={remainingHints}
-                muted={muted}
-                onToggleMute={toggleMute}
-              />
-
               {currentMovie.hints.length > 0 && currentHintIndex < currentMovie.hints.length ? (
                 <p className='hints_control' key={currentHintIndex} aria-live='polite'>
                   <FaLightbulb className="bulb-hint" aria-hidden='true' />{currentMovie.hints[currentHintIndex]}

@@ -1,24 +1,21 @@
 import './LanguageSwitch.css'
 import { useTranslation } from '../i18n/context'
-import { LANGUAGES } from '../i18n/translations'
 
 export const LanguageSwitch = () => {
   const { t, lang, setLanguage } = useTranslation()
 
+  // Clicar em qualquer parte do botão alterna entre os dois idiomas.
+  const toggle = () => setLanguage(lang === 'pt' ? 'en' : 'pt')
+
   return (
-    <div className='lang-switch' role='group' aria-label={t('lang.label')}>
-      {LANGUAGES.map((code) => (
-        <button
-          key={code}
-          type='button'
-          className={`lang-btn ${lang === code ? 'active' : ''}`}
-          onClick={() => setLanguage(code)}
-          aria-pressed={lang === code}
-          aria-label={t(`lang.${code}`)}
-        >
-          {code.toUpperCase()}
-        </button>
-      ))}
-    </div>
+    <button
+      type='button'
+      className='lang-switch'
+      onClick={toggle}
+      aria-label={`${t('lang.label')}: ${t(`lang.${lang}`)}`}
+    >
+      <span className={`lang-seg ${lang === 'pt' ? 'active' : ''}`} aria-hidden='true'>PT</span>
+      <span className={`lang-seg ${lang === 'en' ? 'active' : ''}`} aria-hidden='true'>EN</span>
+    </button>
   )
 }
