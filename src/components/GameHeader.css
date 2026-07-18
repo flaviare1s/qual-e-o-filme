@@ -28,16 +28,53 @@
 
 .header-icon {
   font-size: 1.3em;
-  color: #ffd700;
+  color: var(--gold);
   flex-shrink: 0;
 }
 
 .heart-icon {
-  color: #ff4757;
+  color: var(--heart);
+  animation: shake 0.45s var(--ease-out-quart);
 }
 
 .bulb-icon {
-  color: #ffd700;
+  color: var(--gold);
+}
+
+.score-value {
+  animation: pop 0.4s var(--ease-out-quart);
+}
+
+.mute-btn {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--gold-soft);
+  border-radius: 12px;
+  padding: 0;
+  min-height: 0;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.2em;
+  text-transform: none;
+  letter-spacing: normal;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s var(--ease-out-quart), border-color 0.25s ease;
+}
+
+.mute-btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: translateY(0) scale(1.06);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mute-btn[aria-pressed='true'] {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .header-label {

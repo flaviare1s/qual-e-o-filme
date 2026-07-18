@@ -1,10 +1,13 @@
 .start-game {
   width: 100%;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
+  padding: 28px 24px;
+  background-color: var(--panel);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  animation: riseIn 0.5s var(--ease-out-quart);
 }
 
 .start-game h3 {
@@ -90,8 +93,20 @@ p.hints_control {
   font-size: 1.2em;
   font-weight: 600;
   margin: 20px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  padding: 15px;
+  text-shadow: var(--shadow-text);
+  padding: 18px 20px;
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 12px;
+  animation: fadeUp 0.4s var(--ease-out-quart);
+}
+
+.no-hints {
+  color: #ff8a8a;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  animation: fadeUp 0.4s var(--ease-out-quart);
 }
 
 .previous_hints {
@@ -116,9 +131,21 @@ p.hints_control {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  animation: riseIn 0.4s var(--ease-out-quart);
+}
+
+.options-container:focus {
+  outline: none;
+}
+
+.options-container:focus-visible {
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 4px;
 }
 
 .options-container p {

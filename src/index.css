@@ -1,3 +1,17 @@
+:root {
+  --gold: #ffd700;
+  --gold-soft: rgba(255, 215, 0, 0.3);
+  --crimson: #8b0000;
+  --crimson-hover: #a40000;
+  --heart: #ff4757;
+  --success: #4caf50;
+  --panel: rgba(0, 0, 0, 0.55);
+  --panel-strong: rgba(0, 0, 0, 0.75);
+  --shadow-text: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --z-hud: 100;
+}
+
 html,
 body {
   height: 100%;
@@ -21,20 +35,120 @@ h1 {
 }
 
 button {
-  background-color: #8b0000;
+  background-color: var(--crimson);
   color: #ffffff;
   padding: 0 30px;
   border: 2px solid white;
   border-radius: 25px;
-  height: 50px;
+  min-height: 50px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1em;
   letter-spacing: 1.5px;
   cursor: pointer;
-  transition: 0.4s;
+  transition: transform 0.18s var(--ease-out-quart),
+    background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 button:hover {
-  background-color: #a40000;
+  background-color: var(--crimson-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Vocabulário de movimento compartilhado */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0.6) rotate(-8deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15) rotate(4deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -6,15 +6,21 @@
     font-size: 3.5em;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.352);
     padding: 0 20px;
+    animation: fadeUp 0.5s var(--ease-out-quart) both;
   }
 
   .start p {
     margin-bottom: 32px;
-    color: #FFD700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: var(--gold);
+    text-shadow: var(--shadow-text);
     font-size: 20px;
     font-weight: bold;
     padding: 0 20px;
+    animation: fadeUp 0.5s var(--ease-out-quart) 0.08s both;
+  }
+
+  .start > button {
+    animation: fadeUp 0.5s var(--ease-out-quart) 0.16s both;
   }
 
   @media (max-width: 500px) {
