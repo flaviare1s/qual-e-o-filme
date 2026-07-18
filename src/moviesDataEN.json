@@ -1,0 +1,161 @@
+[
+    {
+      "id": 1,
+      "title": "Inception",
+      "hints": ["Five Levels", "Architect", "Dreams within dreams", "Leonardo DiCaprio", "Christopher Nolan"]
+    },
+    {
+      "id": 2,
+      "title": "The Shawshank Redemption",
+      "hints": ["Inside the bible", "Prison escape", "Morgan Freeman", "Tim Robbins", "Stephen King"]
+    },
+    {
+      "id": 3,
+      "title": "The Lord Of The Rings",
+      "hints": ["Something really precious", "Something shall not pass", "Three stone trolls", "Sauron", "Tolkien"]
+    },
+    {
+      "id": 4,
+      "title": "Pulp Fiction",
+      "hints": ["Expensive milk shake", "A hidden watch", "Adrenaline in the chest", "Girl, You'll Be A Woman Soon", "Quentin Tarantino"]
+    },
+    {
+      "id": 5,
+      "title": "Mission: Impossible",
+      "hints": ["Safe and sweat", "This hint will self destruct in five seconds", "Be careful with masks", "Ethan Hunt", "Tom Cruise"]
+    },
+    {
+      "id": 6,
+      "title": "Scream",
+      "hints": ["Deadly phone call", "Being a virgin gives you an advantage", "Ghostface", "Homage to classic horror films", "There were several sequels"]
+    },
+    {
+      "id": 7,
+      "title": "The Terminator 3: Rise of the Machines",
+      "hints": ["Talk to the hand", "Skynet", "Humans versus AI", "Sarah Connor", "Arnold Schwarzenegger"]
+    },
+    {
+      "id": 8,
+      "title": "Seven",
+      "hints": ["Wrath makes you lose your head", "Do not be lazy", "Two cops", "David Fincher", "Brad Pitt"]
+    },
+    {
+      "id": 9,
+      "title": "The Hunger Games",
+      "hints": ["I'm listen to the mockingjays", "They like fashion in the Capitol", "A dress on fire", "Katniss", "Based on a series of books"]
+    },
+    {
+      "id": 10,
+      "title": "Saw",
+      "hints": ["A puppet clown riding a bicycle", "Sadistic traps", "A long time in a bathroom", "James Wan", "This film marks the beginning of a highly successful horror franchise"]
+    },
+    {
+      "id": 11,
+      "title": "Interstellar",
+      "hints": ["Books falling from the shelf", "Different dimensions", "Environmental problems", "Science fiction", "Christopher Nolan"]
+    },
+    {
+      "id": 12,
+      "title": "Meet the Parents",
+      "hints": ["A cat named Jinx", "Mr. Focker?", "A future marriage", "Ben Stiller", "Robert De Niro"]
+    },
+    {
+      "id": 13,
+      "title": "300",
+      "hints": ["A Persian messenger", "War elephants", "Greece", "The name of the film is a number", "Leónidas"]
+    },
+    {
+      "id": 14,
+      "title": "Beauty and the Beast",
+      "hints": ["A very precious rose", "Small village in France", "Clock, teapot and candlestick", "An Enchanted Castle", "Disney"]
+    },
+    {
+      "id": 15,
+      "title": "Kill Bill",
+      "hints": ["The film has two parts", "Black Mamba", "A thirst for vengeance", "Pai Mei", "Quentin Tarantino"]
+    },
+    {
+      "id": 16,
+      "title": "A Nightmare On Elm Street",
+      "hints": ["The name of the film refers to a street", "Dangerous dreams", "Burned alive", "A famous Freddy", "Wes Craven"]
+    },
+    {
+      "id": 17,
+      "title": "The Sound Of Music",
+      "hints": ["A classic musical", "Fraulein Maria", "Von Trapp family", "Nazi Rule", "Julie Andrews and Christopher Plummer"]
+    },
+    {
+      "id": 18,
+      "title": "Harry Potter",
+      "hints": ["A castle in England", "Three inseparable friends", "Lightning-shaped scar", "Wizards and muggles", "You know who is the bad guy"]
+    },
+    {
+      "id": 19,
+      "title": "The Shining",
+      "hints": ["REDRUM", "Overlook Hotel", "Twins wearing a blue dress", "Jack Nicholson", "Stephen King"]
+    },
+    {
+      "id": 20,
+      "title": "The Omen",
+      "hints": ["Damien Thorn", "A replaced child", "666", "An important Priest", "Antichrist"]
+    },
+    {
+      "id": 21,
+      "title": "Flatliners",
+      "hints": ["Near-death experiences", "Famous thriller from the 90s","Secrets of the past", "Five curious medical students", "Joel Schumacher"]
+    },
+    {
+      "id": 22,
+      "title": "Ghostbusters",
+      "hints": ["Marshmallow Man", "An iconic theme song by Ray Parker Jr.", "Ghosts", "New York City", "Sigourney Weaver and Bill Murray"]
+    },
+    {
+      "id": 23,
+      "title": "Pretty Woman",
+      "hints": ["Beverly Hills", "A very famous love story from the 90s", "A remarkable song", "Modern Cinderella", "Julia Roberts and Richard Gere"]
+    },
+    {
+      "id": 24,
+      "title": "Interview With The Vampire",
+      "hints": ["Bloodlust", "Tom Cruise and Brad Pitt", "Lestat and Louis", "Vampires", "Anne Rice"]
+    },
+    {
+      "id": 25,
+      "title": "Ghost",
+      "hints": ["Love transcends death", "Pottery scene", "Ghostly communication", "Whoopi Goldberg's Oscar-winning performance", "Patrick Swayze and Demi Moore"]
+    },
+    {
+      "id": 26,
+      "title": "Die Hard",
+      "hints": [
+        "Christmas Eve",
+        "Nakatomi Plaza",
+        "A police officer",
+        "John McClane",
+        "Bruce Willis"
+      ]
+    },
+      {
+        "id": 27,
+        "title": "Titanic",
+        "hints": [
+          "A famous ship",
+          "A love story",
+          "13 Oscars",
+          "Leonardo DiCaprio and Kate Winslet",
+          "A shipwreck"
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Beetlejuice",
+        "hints": [
+          "A haunted house",
+          "A peculiar teenager",
+          "Iconic costume and a famous song",
+          "Repeated name",
+          "An iconic director"
+        ]
+      }
+]
+  

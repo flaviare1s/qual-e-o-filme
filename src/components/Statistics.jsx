@@ -2,16 +2,12 @@
 import './Statistics.css'
 import { useEffect, useRef } from 'react'
 import { playWin, playLose, playFinish } from '../utils/sound'
-
-const OUTCOMES = {
-  win: { emoji: '🎉', title: 'Parabéns!', message: 'Você acertou todos os filmes!' },
-  finish: { emoji: '🎬', title: 'Fim dos filmes', message: 'Você chegou ao fim, mas não adivinhou o último filme.' },
-  lose: { emoji: '💀', title: 'Fim de jogo', message: 'Suas vidas acabaram. Tente de novo!' },
-}
+import { useTranslation } from '../i18n/context'
 
 export function Statistics({ currentScore, onRestart, onBackToMenu, outcome = 'finish' }) {
+  const { t } = useTranslation()
   const headingRef = useRef(null)
-  const { emoji, title, message } = OUTCOMES[outcome] || OUTCOMES.finish
+  const { emoji, title, message } = t(`stats.outcomes.${outcome}`) || t('stats.outcomes.finish')
 
   const stats = JSON.parse(localStorage.getItem('movieGameStats') || '{}')
   const highScore = stats.highScore || 0
@@ -30,12 +26,12 @@ export function Statistics({ currentScore, onRestart, onBackToMenu, outcome = 'f
   }, [outcome])
 
   const statItems = [
-    { label: 'Pontuação Atual', value: currentScore, className: 'current' },
-    { label: 'Recorde', value: highScore, className: 'highlight' },
-    { label: 'Jogos Jogados', value: gamesPlayed },
-    { label: 'Jogos Vencidos', value: gamesWon },
-    { label: 'Taxa de Vitória', value: `${winRate}%` },
-    { label: 'Pontuação Média', value: averageScore },
+    { label: t('stats.current'), value: currentScore, className: 'current' },
+    { label: t('stats.highScore'), value: highScore, className: 'highlight' },
+    { label: t('stats.played'), value: gamesPlayed },
+    { label: t('stats.won'), value: gamesWon },
+    { label: t('stats.winRate'), value: `${winRate}%` },
+    { label: t('stats.average'), value: averageScore },
   ]
 
   return (
@@ -59,8 +55,8 @@ export function Statistics({ currentScore, onRestart, onBackToMenu, outcome = 'f
       </div>
 
       <div className='stats-buttons'>
-        <button onClick={onRestart}>Jogar novamente</button>
-        <button className='secondary' onClick={onBackToMenu}>Voltar ao menu</button>
+        <button onClick={onRestart}>{t('stats.playAgain')}</button>
+        <button className='secondary' onClick={onBackToMenu}>{t('stats.backToMenu')}</button>
       </div>
     </div>
   )

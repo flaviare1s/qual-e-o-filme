@@ -3,8 +3,10 @@ import { useState } from 'react'
 import { StartScreen } from './components/StartScreen'
 import { Game } from './components/Game'
 import moviesData from './moviesData.json'
+import moviesDataEN from './moviesDataEN.json'
 import { Toaster } from 'react-hot-toast'
 import { Footer } from './components/Footer'
+import { useTranslation } from './i18n/context'
 
 const stages = [
   { id: 1, name: 'start' },
@@ -13,11 +15,11 @@ const stages = [
 ]
 
 export function App() {
+  const { lang } = useTranslation()
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [shuffledMovies, setShuffledMovies] = useState([])
 
   const startGame = () => {
-
     setShuffledMovies(shuffleMovies())
     setGameStage(stages[1].name)
   }
@@ -27,7 +29,8 @@ export function App() {
   }
 
   const shuffleMovies = () => {
-    const shuffledArray = [...moviesData]
+    const source = lang === 'en' ? moviesDataEN : moviesData
+    const shuffledArray = [...source]
     shuffledArray.sort(() => Math.random() - 0.5)
     return shuffledArray
   }

@@ -13,8 +13,10 @@ import {
   playWrong,
   playClick,
 } from '../utils/sound'
+import { useTranslation } from '../i18n/context'
 
 export function Game({ moviesData, onBackToMenu }) {
+  const { t } = useTranslation()
   const [currentMovieIndex, setCurrentMovieIndex] = useState(() => {
     return parseInt(localStorage.getItem('currentMovieIndex')) || 0
   })
@@ -78,7 +80,7 @@ export function Game({ moviesData, onBackToMenu }) {
     if (hasGuessed) return
 
     if (!userGuess.trim()) {
-      toast.error('Por favor, insira uma resposta!');
+      toast.error(t('game.emptyGuess'));
       return;
     }
 
@@ -96,7 +98,7 @@ export function Game({ moviesData, onBackToMenu }) {
 
       if (!isLastMovie) {
         playCorrect();
-        toast.success(`Parabéns! ${pointsEarned} pontos adicionados!`);
+        toast.success(t('game.correct', { points: pointsEarned }));
         setTimeout(() => {
           setCurrentMovieIndex(currentMovieIndex + 1);
           setCurrentHintIndex(0);
@@ -117,9 +119,9 @@ export function Game({ moviesData, onBackToMenu }) {
       playWrong();
 
       if (newLives === 0) {
-        toast.error('Você perdeu todas as vidas!');
+        toast.error(t('game.lostAll'));
       } else {
-        toast.error('Você perdeu uma vida! Tente novamente');
+        toast.error(t('game.lostLife'));
         setShowOptions(true);
       }
 
@@ -229,14 +231,14 @@ export function Game({ moviesData, onBackToMenu }) {
                 </p>
               ) : currentHintIndex >= currentMovie.hints.length && (
                 <p className='no-hints' aria-live='polite'>
-                  Você não tem mais dicas disponíveis!
+                  {t('game.noHints')}
                 </p>
               )}
 
               {showGuessBox && (
                 <form onSubmit={handleGuessSubmit}>
                   <label htmlFor='guess-input'>
-                    <p className='guess_text'> Qual é o filme? </p>
+                    <p className='guess_text'>{t('game.prompt')}</p>
                   </label>
                   <input
                     id='guess-input'
@@ -244,19 +246,19 @@ export function Game({ moviesData, onBackToMenu }) {
                     type="text"
                     value={guess}
                     onChange={handleGuessChange}
-                    placeholder="Digite seu palpite..."
+                    placeholder={t('game.placeholder')}
                     autoComplete='off'
                     autoFocus
                   />
                   <p>
-                    <button type="submit">Enviar</button>
+                    <button type="submit">{t('game.submit')}</button>
                   </p>
                 </form>
               )}
 
               {showHints && currentHintIndex > 0 && (
                 <div>
-                    <h3 className='previous_hints'>Dicas anteriores:</h3>
+                    <h3 className='previous_hints'>{t('game.previousHints')}</h3>
                   <ol className='hints_box'>
                     {currentMovie.hints.slice(0, currentHintIndex).map((hint, index) => (
                       <li key={index}>{hint}</li>
@@ -266,14 +268,14 @@ export function Game({ moviesData, onBackToMenu }) {
               )}
             </div>
           ) : !outcome && (
-            <div className='options-container' ref={optionsRef} tabIndex={-1} role='group' aria-label='Opções após erro'>
-              <p>Que pena, você perdeu uma vida!</p>
-              <p>Quer mais uma dica ou quer mudar de filme?</p>
+            <div className='options-container' ref={optionsRef} tabIndex={-1} role='group' aria-label={t('game.optionsAria')}>
+              <p>{t('game.optionsLostLife')}</p>
+              <p>{t('game.optionsQuestion')}</p>
               <p>
-                <button style={{ width: '220px' }} onClick={() => handleOptionClick('retry')}>Continuar</button>
+                <button style={{ width: '220px' }} onClick={() => handleOptionClick('retry')}>{t('game.retry')}</button>
               </p>
               <p>
-                <button style={{ width: '220px' }} onClick={() => handleOptionClick('changeMovie')}>Mudar filme</button>
+                <button style={{ width: '220px' }} onClick={() => handleOptionClick('changeMovie')}>{t('game.changeMovie')}</button>
               </p>
             </div>
           )}
