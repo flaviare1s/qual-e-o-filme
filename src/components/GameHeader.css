@@ -104,7 +104,7 @@
 
   .game-header-item {
     padding: 10px 14px;
-    min-width: 60px;
+    min-width: 10px;
     gap: 8px;
   }
 
