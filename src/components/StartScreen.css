@@ -1,42 +1,6 @@
 .start {
     width: 100vw;
-}
-
-.lang-switch {
-    display: inline-flex;
-    gap: 4px;
-    padding: 4px;
-    margin-bottom: 28px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--gold-soft);
-    border-radius: 999px;
-    animation: fadeUp 0.5s var(--ease-out-quart) both;
-}
-
-.lang-btn {
-    min-height: 40px;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 999px;
-    background: transparent;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.lang-btn:hover {
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    transform: none;
-    box-shadow: none;
-}
-
-.lang-btn.active,
-.lang-btn.active:hover {
-    background: var(--gold);
-    color: #1a1a1a;
-    transform: none;
+    padding-top: 40px;
 }
 
 .start h1 {

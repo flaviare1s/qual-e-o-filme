@@ -2,11 +2,12 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 34px 24px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 215, 0, 0.15);
-  border-radius: 16px;
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
+  padding: 36px 26px;
+  background: var(--surface);
+  backdrop-filter: var(--surface-blur);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  box-shadow: var(--shadow-panel);
   text-align: center;
   animation: riseIn 0.5s var(--ease-out-quart);
 }
@@ -103,14 +104,17 @@
 }
 
 .stats-buttons button.secondary {
-  background-color: transparent;
-  border-color: var(--gold-soft);
+  background: transparent;
+  border: 1px solid var(--gold-soft);
   color: var(--gold);
+  box-shadow: none;
 }
 
 .stats-buttons button.secondary:hover {
-  background-color: rgba(255, 215, 0, 0.12);
+  background: rgba(255, 215, 0, 0.12);
   border-color: var(--gold);
+  box-shadow: none;
+  filter: none;
 }
 
 @media (max-width: 600px) {

@@ -2,13 +2,20 @@
   --font-display: "Bebas Neue", "Impact", sans-serif;
   --font-body: "Manrope", system-ui, sans-serif;
   --gold: #ffd700;
+  --gold-bright: #ffe07a;
+  --gold-deep: #f0b500;
   --gold-soft: rgba(255, 215, 0, 0.3);
+  --ink: #1a1509;
   --crimson: #8b0000;
   --crimson-hover: #a40000;
   --heart: #ff4757;
   --success: #4caf50;
   --panel: rgba(0, 0, 0, 0.55);
   --panel-strong: rgba(0, 0, 0, 0.75);
+  --surface: linear-gradient(160deg, rgba(30, 26, 33, 0.82), rgba(11, 9, 15, 0.8));
+  --surface-blur: blur(16px) saturate(1.05);
+  --border-gold: rgba(255, 215, 0, 0.22);
+  --shadow-panel: 0 24px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   --shadow-text: 2px 2px 4px rgba(0, 0, 0, 0.7);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --z-hud: 100;
@@ -26,8 +33,10 @@ body {
   margin: auto;
   font-family: var(--font-body);
   padding: 0;
+  background-color: #06040a;
   background-image: url("/public/images/background.jpg");
   background-size: cover;
+  background-position: center;
   color: white;
   overflow-x: hidden;
 }
@@ -38,30 +47,33 @@ h1 {
 }
 
 button {
-  background-color: var(--crimson);
-  color: #ffffff;
-  padding: 0 30px;
-  border: 2px solid white;
-  border-radius: 25px;
-  min-height: 50px;
+  background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold-deep) 100%);
+  color: var(--ink);
+  padding: 0 32px;
+  border: none;
+  border-radius: 999px;
+  min-height: 52px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-  letter-spacing: 1.5px;
+  font-weight: 800;
+  font-size: 0.95em;
+  letter-spacing: 1.2px;
   cursor: pointer;
-  transition: transform 0.18s var(--ease-out-quart),
-    background-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 20px rgba(240, 181, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition: transform 0.18s var(--ease-out-quart), box-shadow 0.25s ease,
+    filter 0.2s ease;
 }
 
 button:hover {
-  background-color: var(--crimson-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 28px rgba(240, 181, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  filter: brightness(1.05);
 }
 
 button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px rgba(240, 181, 0, 0.32);
 }
 
 button:focus-visible {
@@ -74,6 +86,7 @@ button:disabled {
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+  filter: none;
 }
 
 /* Vocabulário de movimento compartilhado */

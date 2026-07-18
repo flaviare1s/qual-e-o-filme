@@ -14,6 +14,7 @@ import {
   playClick,
 } from '../utils/sound'
 import { useTranslation } from '../i18n/context'
+import { isCorrectGuess } from '../utils/matchGuess'
 
 export function Game({ moviesData, onBackToMenu }) {
   const { t } = useTranslation()
@@ -84,10 +85,7 @@ export function Game({ moviesData, onBackToMenu }) {
       return;
     }
 
-    const cleanUserGuess = userGuess.trim().toLowerCase().replace(/[^\w\s]/gi, '');
-    const cleanMovieTitle = currentMovie.title.trim().toLowerCase().replace(/[^\w\s]/gi, '');
-
-    if (cleanUserGuess === cleanMovieTitle) {
+    if (isCorrectGuess(userGuess, currentMovie.title)) {
       // Piso de 100: acertar nunca pode reduzir a pontuação, mesmo depois de
       // esgotar as dicas (currentHintIndex >= 5 tornaria 500 - n*100 <= 0).
       const pointsEarned = Math.max(500 - currentHintIndex * 100, 100);

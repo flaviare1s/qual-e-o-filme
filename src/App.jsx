@@ -1,11 +1,12 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { StartScreen } from './components/StartScreen'
 import { Game } from './components/Game'
 import moviesData from './moviesData.json'
 import moviesDataEN from './moviesDataEN.json'
 import { Toaster } from 'react-hot-toast'
 import { Footer } from './components/Footer'
+import { LanguageSwitch } from './components/LanguageSwitch'
 import { useTranslation } from './i18n/context'
 
 const stages = [
@@ -35,8 +36,19 @@ export function App() {
     return shuffledArray
   }
 
+  // Trocar de idioma no meio do jogo: mantém a ordem embaralhada e o índice
+  // atual, só remapeando cada filme para o mesmo id no outro idioma.
+  useEffect(() => {
+    setShuffledMovies((prev) => {
+      if (prev.length === 0) return prev
+      const source = lang === 'en' ? moviesDataEN : moviesData
+      return prev.map((movie) => source.find((m) => m.id === movie.id) || movie)
+    })
+  }, [lang])
+
   return (
     <div className='main'>
+      <LanguageSwitch />
       <div className='App'>
         <div className="overlay" />
         {gameStage === 'start' && <StartScreen startGame={startGame} />}

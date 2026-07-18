@@ -46,7 +46,7 @@
 }
 
 .mute-btn {
-  background-color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(10px);
   border: 2px solid var(--gold-soft);
   border-radius: 12px;
@@ -66,10 +66,11 @@
 }
 
 .mute-btn:hover {
-  background-color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.75);
   border-color: rgba(255, 215, 0, 0.6);
   transform: translateY(0) scale(1.06);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  filter: none;
 }
 
 .mute-btn[aria-pressed='true'] {
