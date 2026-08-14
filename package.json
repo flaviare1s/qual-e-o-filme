@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "homepage": "https://flaviare1s.github.io/what-is-the-movie/",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
